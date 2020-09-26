@@ -1,0 +1,11 @@
+<p>Edit Student</p>
+<%=form_for @student do |f|%>
+<p>Student Name:<%=f.text_field :name%></p>
+<p>Student Major:<%=f.text_field :major%></p>
+<p>Student Age:<%=f.text_field :age%></p>
+<p>Select an Instructor: <%=f.select :instructor_id, Instructor.all.map {|instructor| [instructor.name, instructor.id]} %></p>
+<p><%=f.submit "Update Student"%>
+<br>
+<%end%>
+
+<%= button_to "Delete Student", @student, method: :delete%>

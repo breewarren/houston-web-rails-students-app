@@ -1,0 +1,7 @@
+<p><%=@instructor.name%>'s Profile</p>
+
+<li>Name: <%=@instructor.name%></li>
+
+
+<p><%=button_to "Edit Instructor", {action: "edit"}, method: :get %></p>
+<p><%=button_to "Instructor Index", {action: "index"}, method: :get%></p>

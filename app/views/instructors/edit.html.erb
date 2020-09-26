@@ -1,0 +1,8 @@
+<p>Edit Instructor</p>
+<%=form_for @instructor do |f|%>
+<p>Instructor Name:<%=f.text_field :name%></p>
+<p><%=f.submit "Update Instructor"%>
+<br>
+<%end%>
+
+<%= button_to "Delete Instructor", @instructor, method: :delete%>

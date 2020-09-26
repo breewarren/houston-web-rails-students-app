@@ -1,0 +1,9 @@
+<p><%=@student.name%>'s Profile</p>
+
+<li>Name: <%=@student.name%></li>
+<li>Major: <%=@student.major%></li>
+<li>Age: <%=@student.age%></li>
+<li>Instructor: <%=@student.instructor.name%></li>
+<br>
+<%=button_to "Edit Student", {action: "edit"}, method: :get %> 
+<p><%=button_to "Student Index", {action: "index"}, method: :get%></p>

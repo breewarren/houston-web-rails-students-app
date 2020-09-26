@@ -1,0 +1,11 @@
+<p>Instructor Index</p>
+
+<%@instructors.each do |instructor|%>
+<li><%=link_to instructor.name, instructor%></li>
+<%end%>
+<p><%=button_to "Create New Instructor", {action: "new"}, method: :get%></p>
+<br>
+<br>
+<% if flash[:notice] %>
+Successful: <%=notice%>
+<%end%>

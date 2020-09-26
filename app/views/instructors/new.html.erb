@@ -1,0 +1,13 @@
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<li>Invalid Entry: <%= error %></li>
+<%end%>
+<%end%>
+
+<p>Create an Instructor</p>
+<%=form_for @instructor do |f|%>
+<p>Instructor Name:<%=f.text_field :name%></p>
+<p><%=f.submit "Create Instructor"%>
+<%end%>
+
+

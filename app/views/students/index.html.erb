@@ -1,0 +1,11 @@
+<p>Student Index</p>
+
+<%@students.each do |student|%>
+<li><%=link_to student.name, student%></li>
+<%end%>
+<p><%=button_to "Create New Student", {action: "new"}, method: :get%></p>
+<br>
+<br>
+<% if flash[:notice] %>
+Successful: <%=notice%>
+<%end%>
